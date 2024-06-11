@@ -1,6 +1,6 @@
 [![INTERSPEECH 2024 Paper](https://img.shields.io/badge/INterspeech%202024%20Paper-accepted-brightgreen.svg?style=for-the-badge)](https://www.interspeech2024.org/)
 
-![INterspeech Logo](utils\logo-2024.png)
+![INterspeech Logo](utils/logo-2024.png)
 # Missingness-resilient Video-enhanced Multimodal Disfluency Detection
 
 ************* This page is under construction. We are working steadily to release the database and codebase at the earliest **********
@@ -9,7 +9,7 @@
 
 Most existing speech disfluency detection techniques only rely upon acoustic data. In this work, we present a practical multimodal disfluency detection approach that leverages available video data together with audio. We curate an audio-visual dataset and propose a novel fusion technique with unified weight-sharing modality-agnostic encoders to learn the temporal and semantic context. Our resilient design accommodates real-world scenarios where the video modality may sometimes be missing during inference. We also present alternative fusion strategies when both modalities are assured to be complete. In experiments across five disfluency-detection tasks, our unified multimodal approach significantly outperforms Audio-only unimodal methods, yielding an average absolute improvement of 10% (i.e., 10 percentage point increase) when both video and audio modalities are always available, and 7% even when video modality is missing in half of the samples.
 
-![System Diagram](utils\Interspeech_overall.drawio_annoated.png)
+![System Diagram](utils/Interspeech_overall.drawio_annoated.png)
 
 ## Database
 
