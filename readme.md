@@ -1,7 +1,8 @@
 # Missingness-Resilient Video-Enhanced Multimodal Disfluency Detection
 
-[![INTERSPEECH 2024 Paper](https://img.shields.io/badge/INterspeech%202024%20Paper-accepted-brightgreen.svg?style=for-the-badge)](https://www.interspeech2024.org/)
+![INTERSPEECH Logo](utils/logo-2024.png)
 
+[![INTERSPEECH 2024 Paper](https://img.shields.io/badge/INterspeech%202024%20Paper-accepted-brightgreen.svg?style=for-the-badge)](https://www.interspeech2024.org/)
 
 ## Overview
 
@@ -51,7 +52,14 @@ python main_audio_video_unified_fusion.py --stutter_type='Block/' --num_epochs=4
 
 ## Citation
 
-<!-- Include citation information if applicable -->
+```
+@article{mohapatra2024missingness,
+  title={Missingness-resilient Video-enhanced Multimodal Disfluency Detection},
+  author={Mohapatra, Payal and Likhite, Shamika and Biswas, Subrata and Islam, Bashima and Zhu, Qi},
+  journal={arXiv preprint arXiv:2406.06964},
+  year={2024}
+}
+```
 
 ## Acknowledgement
 
