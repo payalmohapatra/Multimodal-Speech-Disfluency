@@ -1,62 +1,64 @@
+Certainly! Here's a revised and more professional version of the readme:
+
+---
+
+# Missingness-Resilient Video-Enhanced Multimodal Disfluency Detection
+
 [![INTERSPEECH 2024 Paper](https://img.shields.io/badge/INterspeech%202024%20Paper-accepted-brightgreen.svg?style=for-the-badge)](https://www.interspeech2024.org/)
 
-![INterspeech Logo](utils\logo-2024.png)
-# Missingness-resilient Video-enhanced Multimodal Disfluency Detection
-
-************* This page is under construction. We are working steadily to release the database and codebase at the earliest **********
+![INTERSPEECH Logo](utils/logo-2024.png)
 
 ## Overview
 
-Most existing speech disfluency detection techniques only rely upon acoustic data. In this work, we present a practical multimodal disfluency detection approach that leverages available video data together with audio. We curate an audio-visual dataset and propose a novel fusion technique with unified weight-sharing modality-agnostic encoders to learn the temporal and semantic context. Our resilient design accommodates real-world scenarios where the video modality may sometimes be missing during inference. We also present alternative fusion strategies when both modalities are assured to be complete. In experiments across five disfluency-detection tasks, our unified multimodal approach significantly outperforms Audio-only unimodal methods, yielding an average absolute improvement of 10% (i.e., 10 percentage point increase) when both video and audio modalities are always available, and 7% even when video modality is missing in half of the samples.
+Traditional methods for detecting speech disfluencies often rely solely on acoustic data. This paper introduces a novel multimodal approach that incorporates both audio and video modalities for more robust disfluency detection. We propose a unified weight-sharing encoder framework that handles temporal and semantic context fusion, designed to accommodate scenarios where video data may be missing during inference. Experimental results across five disfluency detection tasks demonstrate significant performance gains compared to unimodal methods, achieving an average absolute improvement of 10% when both modalities are consistently available, and 7% even when video data is missing in half of the samples.
 
-![System Diagram](utils\Interspeech_overall.drawio_annoated.png)
+![System Diagram](utils/Interspeech_overall.drawio_annoated.png)
 
-## Database
+## Dataset
 
-<!-- https://figshare.com/articles/dataset/Audio_Visual_Database_for_Speech_Disfluency/25526953
+We provide a time-aligned 3-second segmented audio-visual dataset, preprocessed and available for download [here](https://figshare.com/articles/dataset/Audio_Visual_Database_for_Speech_Disfluency/25526953). You can download the entire dataset using the following command:
 
-wget https://figshare.com/ndownloader/articles/25526953/versions/1 -->
+```bash
+wget https://figshare.com/ndownloader/articles/25526953/versions/1
+```
 
 ## Codebase
 
 ### Dependencies
-<!-- The required packages are listed in requirements.txt and can be installed as :
-```
-pip install -r requirements.txt
-``` -->
 
+To set up the necessary dependencies, create a Conda environment using the provided `environment.yml` file:
+
+```bash
+conda env create -f environment.yml
+```
 
 ### Training
 
-<!-- Use the following command to train the model from scratch using the preprocessed data which are assumed to be in the folder saved_var/.
+#### Data Splits
 
+All training data splits are located in the `./metadata` folder. Results reported are based on training with three different seeds (123, 456, 789).
+
+To view available arguments for training:
+
+```bash
+python main_audio_video_unified_fusion.py -h
 ```
 
-python training_person_id.py
+Example command for training with specific parameters:
 
+```bash
+python main_audio_video_unified_fusion.py --stutter_type='Block/' --num_epochs=400 --p_mask=0.5 --seed_num=456
 ```
 
-Note : We provide the final version of the best hyperparameters for reproduction.
+<!-- ### Evaluation -->
 
-In the folder data_prep/ additional scripts used for preparing the data to the format in saved_var/ is provided. -->
-
-
-### Evaluation
-
-<!-- We provide a notebook (evaluation_tutorial_notebook.ipynb) to verify our results on the labeled validation set using the checkpoint available [here](https://drive.google.com/file/d/1444wvkD6kjUjZuhWncTyKaDUcXXO8r0X/view?usp=drive_link). -->
-
-
+<!-- Include evaluation details if applicable -->
 
 ## Citation
 
-<!-- If you use this machine learning codebase or the insights in your research work, please consider citing:
-```
-@inproceedings{mohapatra2023person,
-  title={Person identification with wearable sensing using missing feature encoding and multi-stage modality fusion},
-  author={Mohapatra, Payal and Pandey, Akash and Keten, Sinan and Chen, Wei and Zhu, Qi},
-  booktitle={ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
-  pages={1--2},
-  year={2023},
-  organization={IEEE}
-}
-``` -->
+<!-- Include citation information if applicable -->
+
+## Acknowledgement
+
+We acknowledge [Lea et al.](https://machinelearning.apple.com/research/stuttering-event-detection) for their contributions in releasing the manually annotated audio dataset FluencyBank and the SEP28k dataset and [Romana et. al](https://arxiv.org/pdf/2311.00867) for their support in extending their work as a baseline in our analyses of multimodal disfluency detection.
+ 
