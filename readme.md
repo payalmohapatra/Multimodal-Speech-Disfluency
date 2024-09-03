@@ -53,11 +53,13 @@ python main_audio_video_unified_fusion.py --stutter_type='Block/' --num_epochs=4
 ## Citation
 
 ```
-@article{mohapatra2024missingness,
-  title={Missingness-resilient Video-enhanced Multimodal Disfluency Detection},
-  author={Mohapatra, Payal and Likhite, Shamika and Biswas, Subrata and Islam, Bashima and Zhu, Qi},
-  journal={arXiv preprint arXiv:2406.06964},
-  year={2024}
+@inproceedings{mohapatra24_interspeech,
+  title     = {Missingness-resilient Video-enhanced Multimodal Disfluency Detection},
+  author    = {Payal Mohapatra and Shamika Likhite and Subrata Biswas and Bashima Islam and Qi Zhu},
+  year      = {2024},
+  booktitle = {Interspeech 2024},
+  pages     = {5093--5097},
+  doi       = {10.21437/Interspeech.2024-1458},
 }
 ```
 
