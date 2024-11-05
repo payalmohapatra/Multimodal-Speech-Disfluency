@@ -12,10 +12,10 @@ Traditional methods for detecting speech disfluencies often rely solely on acous
 
 ## Dataset
 
-We provide a time-aligned 3-second segmented audio-visual dataset, preprocessed and available for download [here](https://figshare.com/articles/dataset/Audio_Visual_Database_for_Speech_Disfluency/25526953). You can download the entire dataset using the following command:
+We provide a time-aligned 3-second segmented audio-visual dataset, preprocessed and available for download [here](https://figshare.com/articles/dataset/Multimodal_dataset_zip/27216024). You can download the entire dataset using the following command:
 
 ```bash
-wget https://figshare.com/ndownloader/articles/25526953/versions/1
+wget https://figshare.com/ndownloader/articles/27216024/versions/1
 ```
 
 ## Codebase
